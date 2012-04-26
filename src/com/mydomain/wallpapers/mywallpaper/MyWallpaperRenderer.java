@@ -34,7 +34,9 @@ public class MyWallpaperRenderer extends RajawaliRenderer {
 		cube.setColor(0xff00ff00);
 		addChild(cube);
 		
-		mAnim = new RotateAnimation3D(new Number3D(0, 360, 0));
+		Number3D axis = new Number3D(3, 1, 6);
+		axis.normalize();
+		mAnim = new RotateAnimation3D(axis, 360);
 		mAnim.setDuration(8000);
 		mAnim.setRepeatCount(Animation3D.INFINITE);
 		mAnim.setInterpolator(new AccelerateDecelerateInterpolator());
