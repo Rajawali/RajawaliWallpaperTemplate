@@ -7,6 +7,7 @@ import rajawali.animation.Animation3D;
 import rajawali.animation.RotateAnimation3D;
 import rajawali.lights.ALight;
 import rajawali.lights.DirectionalLight;
+import rajawali.materials.DiffuseMaterial;
 import rajawali.math.Number3D;
 import rajawali.primitives.Cube;
 import rajawali.renderer.RajawaliRenderer;
@@ -29,8 +30,10 @@ public class MyWallpaperRenderer extends RajawaliRenderer {
 		mCamera.setLookAt(0, 0, 0);
 
 		Cube cube = new Cube(1);
+		DiffuseMaterial material = new DiffuseMaterial();
+		material.setUseColor(true);
+		cube.setMaterial(material);
 		cube.addLight(light);
-		cube.getMaterial().setUseColor(true);
 		cube.setColor(0xff00ff00);
 		addChild(cube);
 		

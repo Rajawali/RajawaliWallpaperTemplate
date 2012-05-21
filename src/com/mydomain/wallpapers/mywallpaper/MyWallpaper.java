@@ -9,6 +9,6 @@ public class MyWallpaper extends Wallpaper {
 	public Engine onCreateEngine() {
 		mRenderer = new MyWallpaperRenderer(this);
 		return new WallpaperEngine(this.getSharedPreferences(SHARED_PREFS_NAME,
-				Context.MODE_PRIVATE), getBaseContext(), mRenderer);
+				Context.MODE_PRIVATE), getBaseContext(), mRenderer, false);
 	}
 }
