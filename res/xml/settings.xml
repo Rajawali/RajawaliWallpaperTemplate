@@ -1,8 +1,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="Live Wallpaper Settings"
-        android:key="rajawalisharedprefs">
+    android:key="rajawalisharedprefs"
+    android:title="Settings" >
 
-	<PreferenceCategory>
-	</PreferenceCategory>
+    <PreferenceCategory>
+    </PreferenceCategory>
 
 </PreferenceScreen>

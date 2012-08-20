@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World!</string>
-    <string name="app_name">MyWallpaper</string>
-	<string name="description">MyWallpaper</string>
+    <string name="app_name">Rajawali Live Wallpaper Template</string>
+
+    <!-- Name in Live Wallpaper Picker list -->
+    <string name="lwp_name">Rajawali Template</string>
+
 </resources>
