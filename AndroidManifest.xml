@@ -33,7 +33,11 @@
         <activity
             android:name=".MyWallpaperSettings"
             android:exported="true"
-            android:label="Settings" >
+            android:label="Settings"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
         </activity>
     </application>
 
