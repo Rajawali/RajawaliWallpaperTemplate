@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Application Name -->
     <string name="app_name">Rajawali Live Wallpaper Template</string>
 
     <!-- Name in Live Wallpaper Picker list -->
@@ -8,6 +9,9 @@
 
     <!-- Description in Live Wallpaper Picker list -->
     <string name="lwp_desc">Example wallpaper that uses Rajawali, an open-source OpenGL ES 2.x engine for Android.</string>
+
+    <!-- Author -->
+    <string name="lwp_author">Rajawali Contributors</string>
 
     <!-- Quick little message displayed when the Live Wallpaper Picker is opened -->
     <!-- The message text is the prefix, lwp_name, and suffix concatenated -->
