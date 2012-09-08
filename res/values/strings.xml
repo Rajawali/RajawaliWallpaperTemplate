@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Application Name -->
-    <string name="app_name">Rajawali Live Wallpaper Template</string>
+    <string name="app_name">Rajawali Wallpaper Template</string>
 
     <!-- Name in Live Wallpaper Picker list -->
     <string name="lwp_name">Rajawali Template</string>
@@ -17,5 +17,8 @@
     <!-- The message text is the prefix, lwp_name, and suffix concatenated -->
     <string name="picker_toast_prefix">Choose \"</string>
     <string name="picker_toast_suffix">\" from the list of live wallpapers</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
 
 </resources>
