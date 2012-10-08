@@ -1,4 +1,5 @@
 <wallpaper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:author="@string/lwp_author"
     android:description="@string/lwp_desc"
     android:settingsActivity="com.mydomain.wallpapers.mywallpaper.MyWallpaperSettings"
-    android:thumbnail="@drawable/ic_launcher" />
+    android:thumbnail="@drawable/thumbnail" />

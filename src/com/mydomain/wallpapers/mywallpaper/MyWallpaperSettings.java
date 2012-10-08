@@ -5,13 +5,19 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
-public class MyWallpaperSettings extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+// Deprecated PreferenceActivity methods are used for API Level 10 (and lower) compatibility
+// https://developer.android.com/guide/topics/ui/settings.html#Overview
+@SuppressWarnings("deprecation")
+public class MyWallpaperSettings extends PreferenceActivity implements
+		SharedPreferences.OnSharedPreferenceChangeListener {
 
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-		getPreferenceManager().setSharedPreferencesName(Wallpaper.SHARED_PREFS_NAME);
+		getPreferenceManager().setSharedPreferencesName(
+				Wallpaper.SHARED_PREFS_NAME);
 		addPreferencesFromResource(R.xml.settings);
-		getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+		getPreferenceManager().getSharedPreferences()
+				.registerOnSharedPreferenceChangeListener(this);
 	}
 
 	protected void onResume() {
@@ -19,10 +25,12 @@ public class MyWallpaperSettings extends PreferenceActivity implements SharedPre
 	}
 
 	protected void onDestroy() {
-		getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
+		getPreferenceManager().getSharedPreferences()
+				.unregisterOnSharedPreferenceChangeListener(this);
 		super.onDestroy();
 	}
 
-	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
+			String key) {
 	}
 }
