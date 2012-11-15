@@ -21,7 +21,6 @@ public class Renderer extends RajawaliRenderer {
 
 	public Renderer(Context context) {
 		super(context);
-		setFrameRate(60);
 	}
 
 	public void initScene() {
