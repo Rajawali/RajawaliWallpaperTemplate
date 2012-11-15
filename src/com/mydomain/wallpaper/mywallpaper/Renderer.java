@@ -12,16 +12,18 @@ import rajawali.math.Number3D;
 import rajawali.primitives.Cube;
 import rajawali.renderer.RajawaliRenderer;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 public class Renderer extends RajawaliRenderer {
 	private Animation3D mAnim;
-	
+
 	public Renderer(Context context) {
 		super(context);
 		setFrameRate(60);
 	}
-	
+
 	public void initScene() {
 		ALight light = new DirectionalLight();
 		light.setPower(1);
@@ -31,12 +33,12 @@ public class Renderer extends RajawaliRenderer {
 
 		Cube cube = new Cube(1);
 		DiffuseMaterial material = new DiffuseMaterial();
-		material.setUseColor(true);
 		cube.setMaterial(material);
+		Bitmap texture = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.rajawali_tex);
+		cube.addTexture(mTextureManager.addTexture(texture));
 		cube.addLight(light);
-		cube.setColor(0xff00ff00);
 		addChild(cube);
-		
+
 		Number3D axis = new Number3D(3, 1, 6);
 		axis.normalize();
 		mAnim = new RotateAnimation3D(axis, 360);
@@ -45,7 +47,7 @@ public class Renderer extends RajawaliRenderer {
 		mAnim.setInterpolator(new AccelerateDecelerateInterpolator());
 		mAnim.setTransformable3D(cube);
 	}
-	
+
 	public void onSurfaceCreated(GL10 gl, EGLConfig config) {
 		super.onSurfaceCreated(gl, config);
 		mAnim.start();
