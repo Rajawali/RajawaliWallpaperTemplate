@@ -1,13 +1,13 @@
-package com.mydomain.wallpapers.mywallpaper;
+package com.mydomain.wallpaper.mywallpaper;
 
 import rajawali.wallpaper.Wallpaper;
 import android.content.Context;
 
-public class MyWallpaper extends Wallpaper {
-	private MyWallpaperRenderer mRenderer;
+public class Service extends Wallpaper {
+	private Renderer mRenderer;
 
 	public Engine onCreateEngine() {
-		mRenderer = new MyWallpaperRenderer(this);
+		mRenderer = new Renderer(this);
 		return new WallpaperEngine(this.getSharedPreferences(SHARED_PREFS_NAME,
 				Context.MODE_PRIVATE), getBaseContext(), mRenderer, false);
 	}

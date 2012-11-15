@@ -14,7 +14,7 @@ This is a sample live wallpaper for Android. It uses [Rajawali][1], an
 
 ## Customizing
 
-* Change the Java package ```com.mydomain.wallpapers.mywallpaper``` to
+* Change the Java package ```com.mydomain.wallpaper.mywallpaper``` to
   something new. [Eclipse][4] makes this relatively simple with its
   "Refactor" -> "Rename" functionality.
 * Update any package references in ```AndroidManifest.xml```

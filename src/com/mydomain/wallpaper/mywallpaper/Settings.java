@@ -1,4 +1,4 @@
-package com.mydomain.wallpapers.mywallpaper;
+package com.mydomain.wallpaper.mywallpaper;
 
 import rajawali.wallpaper.Wallpaper;
 import android.content.SharedPreferences;
@@ -8,7 +8,7 @@ import android.preference.PreferenceActivity;
 // Deprecated PreferenceActivity methods are used for API Level 10 (and lower) compatibility
 // https://developer.android.com/guide/topics/ui/settings.html#Overview
 @SuppressWarnings("deprecation")
-public class MyWallpaperSettings extends PreferenceActivity implements
+public class Settings extends PreferenceActivity implements
 		SharedPreferences.OnSharedPreferenceChangeListener {
 
 	protected void onCreate(Bundle icicle) {

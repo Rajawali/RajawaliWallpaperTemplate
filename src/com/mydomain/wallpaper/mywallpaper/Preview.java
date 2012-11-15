@@ -1,4 +1,4 @@
-package com.mydomain.wallpapers.mywallpaper;
+package com.mydomain.wallpaper.mywallpaper;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
@@ -9,7 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class MyWallpaperPicker extends Activity {
+public class Preview extends Activity {
 
 	@Override
 	public void onCreate(Bundle icicle) {
@@ -22,8 +22,8 @@ public class MyWallpaperPicker extends Activity {
 			 * Open live wallpaper preview (API Level 16 or greater).
 			 */
 			intent.setAction(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
-			String pkg = MyWallpaper.class.getPackage().getName();
-			String cls = MyWallpaper.class.getCanonicalName();
+			String pkg = Service.class.getPackage().getName();
+			String cls = Service.class.getCanonicalName();
 			intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
 					new ComponentName(pkg, cls));
 		} else {

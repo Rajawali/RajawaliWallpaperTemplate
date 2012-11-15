@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mydomain.wallpapers.mywallpaper"
+    package="com.mydomain.wallpaper.mywallpaper"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -18,7 +18,7 @@
 
         <!-- Wallpaper Service -->
         <service
-            android:name=".MyWallpaper"
+            android:name=".Service"
             android:label="@string/lwp_name"
             android:permission="android.permission.BIND_WALLPAPER" >
             <intent-filter>
@@ -32,7 +32,7 @@
 
         <!-- Wallpaper Settings -->
         <activity
-            android:name=".MyWallpaperSettings"
+            android:name=".Settings"
             android:exported="true"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_WALLPAPER" >
@@ -41,9 +41,9 @@
             </intent-filter>
         </activity>
 
-        <!-- Wallpaper Picker -->
+        <!-- Wallpaper Preview -->
         <activity
-            android:name=".MyWallpaperPicker"
+            android:name=".Preview"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

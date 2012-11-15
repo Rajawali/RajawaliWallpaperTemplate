@@ -1,4 +1,4 @@
-package com.mydomain.wallpapers.mywallpaper;
+package com.mydomain.wallpaper.mywallpaper;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -14,10 +14,10 @@ import rajawali.renderer.RajawaliRenderer;
 import android.content.Context;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-public class MyWallpaperRenderer extends RajawaliRenderer {
+public class Renderer extends RajawaliRenderer {
 	private Animation3D mAnim;
 	
-	public MyWallpaperRenderer(Context context) {
+	public Renderer(Context context) {
 		super(context);
 		setFrameRate(60);
 	}
