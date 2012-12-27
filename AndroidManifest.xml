@@ -34,8 +34,7 @@
         <activity
             android:name=".Settings"
             android:exported="true"
-            android:label="@string/app_name"
-            android:permission="android.permission.BIND_WALLPAPER" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <category android:name="android.intent.category.PREFERENCE" />
             </intent-filter>
