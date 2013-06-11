@@ -10,7 +10,7 @@ import rajawali.lights.DirectionalLight;
 import rajawali.materials.DiffuseMaterial;
 import rajawali.materials.textures.ATexture.TextureException;
 import rajawali.materials.textures.Texture;
-import rajawali.math.Number3D;
+import rajawali.math.Vector3;
 import rajawali.primitives.Cube;
 import rajawali.renderer.RajawaliRenderer;
 import android.content.Context;
@@ -35,7 +35,7 @@ public class Renderer extends RajawaliRenderer {
 			cube.addLight(light);
 			addChild(cube);
 
-			Number3D axis = new Number3D(3, 1, 6);
+			Vector3 axis = new Vector3(3, 1, 6);
 			axis.normalize();
 			RotateAnimation3D anim = new RotateAnimation3D(axis, 360);
 			anim.setDuration(8000);
