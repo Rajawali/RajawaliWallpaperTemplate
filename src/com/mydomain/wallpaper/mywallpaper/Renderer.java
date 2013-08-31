@@ -7,10 +7,11 @@ import rajawali.animation.Animation3D.RepeatMode;
 import rajawali.animation.RotateAnimation3D;
 import rajawali.lights.ALight;
 import rajawali.lights.DirectionalLight;
-import rajawali.materials.DiffuseMaterial;
+import rajawali.materials.Material;
+import rajawali.materials.methods.DiffuseMethod;
 import rajawali.materials.textures.ATexture.TextureException;
 import rajawali.materials.textures.Texture;
-import rajawali.math.Vector3;
+import rajawali.math.vector.Vector3;
 import rajawali.primitives.Cube;
 import rajawali.renderer.RajawaliRenderer;
 import android.content.Context;
@@ -24,15 +25,19 @@ public class Renderer extends RajawaliRenderer {
 	public void initScene() {
 		ALight light = new DirectionalLight(-1, 0, -1);
 		light.setPower(2);
+		
+		getCurrentScene().addLight(light);
+		
 		getCurrentCamera().setPosition(0, 0, 7);
 		getCurrentCamera().setLookAt(0, 0, 0);
 
 		try {
 			Cube cube = new Cube(1);
-			DiffuseMaterial material = new DiffuseMaterial();
-			material.addTexture(new Texture(R.drawable.rajawali_tex));
+			Material material = new Material();
+			material.enableLighting(true);
+			material.setDiffuseMethod(new DiffuseMethod.Lambert());
+			material.addTexture(new Texture("rajawaliTex", R.drawable.rajawali_tex));
 			cube.setMaterial(material);
-			cube.addLight(light);
 			addChild(cube);
 
 			Vector3 axis = new Vector3(3, 1, 6);
