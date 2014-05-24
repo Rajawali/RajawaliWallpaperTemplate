@@ -3,8 +3,9 @@ package com.mydomain.wallpaper.mywallpaper;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import rajawali.animation.Animation3D.RepeatMode;
-import rajawali.animation.RotateAnimation3D;
+import rajawali.animation.Animation.RepeatMode;
+import rajawali.animation.Animation3D;
+import rajawali.animation.RotateOnAxisAnimation;
 import rajawali.lights.ALight;
 import rajawali.lights.DirectionalLight;
 import rajawali.materials.Material;
@@ -39,16 +40,16 @@ public class Renderer extends RajawaliRenderer {
 			material.addTexture(new Texture("rajawaliTex", R.drawable.rajawali_tex));
 			material.setColorInfluence(0);
 			cube.setMaterial(material);
-			addChild(cube);
+			getCurrentScene().addChild(cube);
 
 			Vector3 axis = new Vector3(3, 1, 6);
 			axis.normalize();
-			RotateAnimation3D anim = new RotateAnimation3D(axis, 360);
-			anim.setDuration(8000);
+			Animation3D anim = new RotateOnAxisAnimation(axis, 0, 360);
+			anim.setDurationMilliseconds(8000);
 			anim.setRepeatMode(RepeatMode.INFINITE);
 			anim.setInterpolator(new AccelerateDecelerateInterpolator());
 			anim.setTransformable3D(cube);
-			registerAnimation(anim);
+			getCurrentScene().registerAnimation(anim);
 			anim.play();
 			
 		} catch (TextureException e) {
