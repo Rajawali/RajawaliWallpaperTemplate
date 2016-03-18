@@ -1,5 +1,10 @@
 # Rajawali Live Wallpaper Template
 
+## ATTENTION
+As of 03/17/2016, this template is fully integrated to the examples application which has been moved to the main Rajawali repository: https://github.com/Rajawali/Rajawali. This repository will remain for historical reference but **it is effectively abandoned and no responses from the maintainers should be expected.**
+
+=======================================================================
+
 This is a sample live wallpaper for Android. It uses [Rajawali][1], an
 [open-source][2] OpenGL ES 2.x engine.
 
